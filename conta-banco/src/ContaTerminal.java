@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.io.IOException;
 import java.util.Locale;
 
 public class ContaTerminal {
@@ -8,7 +7,7 @@ public class ContaTerminal {
     static String nomeCliente;
     static double saldo;
 
-    public static void main(String[] args) throws Exception, IOException, InterruptedException {
+    public static void main(String[] args) throws Exception{
         Scanner scanner  = new Scanner(System.in).useLocale(Locale.US);
         String clearCode = "\033c";
 
@@ -32,5 +31,18 @@ public class ContaTerminal {
         String message = String.format("Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo %f já está dísponivel para saque.", nomeCliente, agencia, numero, saldo);
 
         System.out.println(message);
+
+        // String[] nomes = new String[10];
+
+        // for (int i = 0; i < 10; i++) {
+        //     System.out.print("Digite: ");
+        //     nomes[i] = scanner.next();
+        //     System.out.println(clearCode);
+        // }
+        // scanner.close();
+        
+        // System.out.println(nomes[2]);
+        // System.out.println(nomes[6]);
+        // System.out.println(nomes[8]);
     }
 }
